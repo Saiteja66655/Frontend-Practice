@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form Validation</title>
+  <script>
+    function validateForm() {
+      let username = document.getElementById("username").value;
+      let phone = document.getElementById("phone").value;
+
+      // Rule a: Username must start with uppercase followed by lowercase letters or digits
+      let userPattern = /^[A-Z][a-z0-9]+$/;
+
+      // Rule b: Phone number must contain exactly 10 digits
+      let phonePattern = /^[0-9]{10}$/;
+
+      if (!userPattern.test(username)) {
+        alert("Invalid Username! Must start with uppercase followed by lowercase letters or digits.");
+        return false;
+      }
+
+      if (!phonePattern.test(phone)) {
+        alert("Invalid Phone Number! Must contain exactly 10 digits.");
+        return false;
+      }
+
+      alert("Form submitted successfully!");
+      return true;
+    }
+  </script>
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+
+  <form onsubmit="return validateForm()">
+    Username: <input type="text" id="username"><br><br>
+    Phone: <input type="text" id="phone"><br><br>
+    <input type="submit" value="Register">
+  </form>
+
+</body>
+</html>
