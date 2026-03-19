@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML Table</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            padding: 20px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        caption {
+            caption-side: top;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        thead {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+
+        tfoot {
+            background-color: #eee;
+            font-weight: bold;
+        }
+
+        .status {
+            padding: 5px 10px;
+            border-radius: 20px;
+            color: white;
+            font-size: 0.9em;
+        }
+
+        .active {
+            background-color: #28a745;
+        }
+
+        .inactive {
+            background-color: #dc3545;
+        }
+
+        .pending {
+            background-color: #ffc107;
+            color: black;
+        }
+
+        @media (max-width: 600px) {
+            th, td {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="table-container">
+        <table>
+            <caption>User Information Table</caption>
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Rahul Sharma</td>
+                    <td>rahul@example.com</td>
+                    <td><span class="status active">Active</span></td>
+                    <td>India</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>Anita Verma</td>
+                    <td>anita@example.com</td>
+                    <td><span class="status inactive">Inactive</span></td>
+                    <td>India</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>John Doe</td>
+                    <td>john@example.com</td>
+                    <td><span class="status pending">Pending</span></td>
+                    <td>USA</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Sara Khan</td>
+                    <td>sara@example.com</td>
+                    <td><span class="status active">Active</span></td>
+                    <td>UAE</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="5">Total Users: 4</td>
+                </tr>
+            </tfoot>
+
+        </table>
+    </div>
+
+</body>
+</html>
