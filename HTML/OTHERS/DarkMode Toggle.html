@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advanced Dark Mode</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial;
+    transition:0.5s;
+    background:white;
+    color:black;
+}
+
+.dark{
+    background:#111;
+    color:white;
+}
+
+header{
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    background:#222;
+    color:white;
+}
+
+button{
+    padding:10px 15px;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.container{
+    text-align:center;
+    margin-top:100px;
+}
+
+.card{
+    width:250px;
+    margin:auto;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.1);
+}
+
+</style>
+
+</head>
+
+<body id="body">
+
+<header>
+
+<h2>My Website</h2>
+
+<button onclick="toggleMode()">Toggle Mode</button>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h3>Advanced UI</h3>
+<p>Dark Mode Toggle Website</p>
+
+</div>
+
+</div>
+
+<script>
+
+function toggleMode(){
+
+document.getElementById("body").classList.toggle("dark");
+
+}
+
+</script>
+
+</body>
+</html>
