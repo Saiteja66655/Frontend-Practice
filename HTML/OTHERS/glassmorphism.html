@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advanced Login</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(135deg,#00c6ff,#0072ff);
+    font-family:Arial;
+}
+
+.box{
+    width:320px;
+    padding:30px;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.2);
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+    text-align:center;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+}
+
+button{
+    padding:10px;
+    width:100%;
+    border:none;
+    background:#000;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:white;
+    color:black;
+}
+</style>
+
+</head>
+<body>
+
+<div class="box">
+<h2>Login</h2>
+
+<input type="text" placeholder="Username">
+
+<input type="password" placeholder="Password">
+
+<button>Login</button>
+
+</div>
+
+</body>
+</html>
